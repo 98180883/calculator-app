@@ -34,7 +34,7 @@ border-radius: 10px;
 }
 
 .calculator{
-    width:400px;
+    width:360px;
     background:#ecb2d6;
     padding:15px;
     border-radius: 20px;
@@ -121,9 +121,10 @@ footer{
     padding-right: 5px;
     }
     #display{
-        width:280px;
+ width:270px;
 height:35px;
 font-size:30px;
+border-radius: 10px;
 }
 
     .calculator{
