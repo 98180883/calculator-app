@@ -1,0 +1,140 @@
+
+
+
+body{
+ display:flex ;
+ flex-direction: column;
+  width:auto;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    background-image: url("calculator.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+
+margin:0;
+}
+
+.page{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+ flex:1;
+}
+
+
+#display{
+width :360px;
+height:50px;
+background-color: rgb(255, 255, 255);
+color:rgb(5, 12, 17);
+font-size:40px;
+font-weight: bold;
+border-radius: 10px;
+}
+
+.calculator{
+    width:400px;
+    background:#ecb2d6;
+    padding:15px;
+    border-radius: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.row{
+
+    padding:2px;
+white-space: nowrap;
+}
+button {
+  width: 60px;
+  height: 60px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #3d3333;
+  color: white;
+}
+button:hover{
+    background-color: rgba(0, 0, 0, 0.748);
+    font-size: 18px;
+}
+button.danger{
+    background-color:#e54c1e;
+}
+button.danger:hover{
+    background-color:#eb0c0c;
+    font-size:18px;
+}
+button.operator{
+    background-color:#1b4e96;
+}
+button.operator:hover{
+    background-color:#1b0086;
+    font-size: 18px;
+}
+
+button.equal{
+    background-color: rgb(16, 159, 16);
+   
+}
+button.equal:hover{
+    background-color:#025207;
+    font-size:18px;
+}
+button.history{
+    background-color:#3d3333;
+}
+button.history:hover{
+    background-color: rgb(36, 13, 13);
+    font-size: 18px;
+}
+
+button.sqroot{
+    background-color:  #1b4e96;
+}
+button.sqroot:hover{
+    background-color:#1b0086;
+    font-size: 18px;
+}
+button.enter{
+    width:130px;
+    background-color: #15b31f;
+}
+footer{
+    background-color: aqua;
+  width:100%;
+  font-size:small;
+  font-weight: bold;
+ 
+}
+@media(max-width:600px){
+    body{
+         background-image: url("calculator.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+
+    padding-right: 5px;
+    }
+    #display{
+        width:280px;
+height:35px;
+font-size:30px;
+}
+
+    .calculator{
+    width:260px;
+}
+button {
+  width: 45px;
+  height: 40px;
+}
+button.enter{
+    width:100px;
+    background-color: #15b31f;
+}
+}
