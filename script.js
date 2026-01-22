@@ -93,8 +93,8 @@ function calculate(){
     let result;
     
     if(operator==='/' && Number(sNumber)===0){
-        display.value="error"
-        clearAll();
+        display.value="Error"
+        setTimeout(clearAll,1200)
         return;
     }
 
