@@ -24,6 +24,7 @@ align-items: center;
 
 
 #display{
+    text-align: right;
 width :360px;
 height:50px;
 background-color: rgb(255, 255, 255);
@@ -31,19 +32,24 @@ color:rgb(5, 12, 17);
 font-size:40px;
 font-weight: bold;
 border-radius: 10px;
+  padding: 5px 5px;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .calculator{
     width:360px;
-    background:#ecb2d6;
+    background:#000000;
     padding:15px;
     border-radius: 20px;
+margin-left: 4px;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 }
 .row{
+margin-left: 4px;
 
     padding:2px;
 white-space: nowrap;
@@ -56,26 +62,32 @@ button {
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
-  background: #3d3333;
+  background: #524aa2;
   color: white;
 }
+
+button:active{
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.4);
+}
+
 button:hover{
-    background-color: rgba(0, 0, 0, 0.748);
-    font-size: 18px;
+    background-color: rgba(58, 38, 209, 0.964);
+     filter: brightness(1.1);
 }
 button.danger{
     background-color:#e54c1e;
 }
 button.danger:hover{
     background-color:#eb0c0c;
-    font-size:18px;
+    filter: brightness(1.1);
 }
 button.operator{
     background-color:#1b4e96;
 }
 button.operator:hover{
     background-color:#1b0086;
-    font-size: 18px;
+    filter: brightness(1.1);
 }
 
 button.equal{
@@ -84,14 +96,15 @@ button.equal{
 }
 button.equal:hover{
     background-color:#025207;
-    font-size:18px;
+     filter: brightness(1.1);
 }
 button.history{
-    background-color:#3d3333;
+    border-radius: 28px;
+    background-color:#7e57e3;
 }
 button.history:hover{
-    background-color: rgb(36, 13, 13);
-    font-size: 18px;
+    background-color: rgb(58, 42, 177);
+    filter: brightness(1.1);
 }
 
 button.sqroot{
@@ -99,14 +112,15 @@ button.sqroot{
 }
 button.sqroot:hover{
     background-color:#1b0086;
-    font-size: 18px;
+      filter: brightness(1.1);
 }
 button.enter{
     width:130px;
     background-color: #15b31f;
 }
 footer{
-    background-color: aqua;
+  background: rgba(0,0,0,0.15);
+  color:#000;
   width:100%;
   font-size:small;
   font-weight: bold;
@@ -128,7 +142,7 @@ border-radius: 10px;
 }
 
     .calculator{
-    width:260px;
+    width:280px;
 }
 button {
   width: 45px;
