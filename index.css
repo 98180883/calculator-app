@@ -1,69 +1,80 @@
-
-
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body{
- display:flex ;
- flex-direction: column;
-  width:auto;
-    min-height: 100vh;
-    background-color: #f5f5f5;
-    background-image: url("calculator.jpg");
-   background-size: cover;
-   background-repeat: no-repeat;
-
-margin:0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #dbf1ff;
+  gap:10px;
 }
+header{
+    background-color: #002962;
+    color: #f5f5f5;
+   padding:10px;
+    text-align: center;
+  font-size:48px;
+  font-weight: bold;
+letter-spacing: 1px;
 
+}
 .page{
-display: flex;
-flex-direction: column;
-align-items: center;
-
- flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex:1;
+  padding: 20px;
 }
 
-
+/* DISPLAY */
 #display{
-    text-align: right;
-width :360px;
-height:50px;
-background-color: rgb(255, 255, 255);
-color:rgb(5, 12, 17);
-font-size:40px;
-font-weight: bold;
-border-radius: 10px;
-  padding: 5px 5px;
+  text-align: right;
+  width:100%;
+  height:60px;
+  background-color: #fff;
+  color:#000000;
+  font-size:40px;
+  font-weight: bold;
+  border-radius:12px;
+  padding:10px;
   overflow-x: auto;
-  white-space: nowrap;
 }
 
+/* CALCULATOR */
 .calculator{
-    width:360px;
-    background:#000000;
-    padding:15px;
-    border-radius: 20px;
-margin-left: 4px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+  width:100%;
+  max-width:380px;
+  background:#000;
+  padding:15px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
 }
-.row{
-margin-left: 4px;
 
-    padding:2px;
-white-space: nowrap;
+/* ROW FIX */
+.row{
+  display:flex;
+  gap:8px;
+  margin:6px 0;
 }
-button {
-  width: 60px;
-  height: 60px;
-  margin-right: 8px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  background: #524aa2;
-  color: white;
+
+/* BUTTON FIX */
+button{
+      background-color: #dbf1ff;
+  color:rgb(0, 0, 0);
+  flex:1;
+  height:60px;
+  border:none;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+ 
+  font-weight: bold;
 }
 
 button:active{
@@ -72,84 +83,66 @@ button:active{
 }
 
 button:hover{
-    background-color: rgba(58, 38, 209, 0.964);
-     filter: brightness(1.1);
+  background-color: rgba(47, 116, 255, 0.964);
+  color:#ffffff;
 }
+
+/* SPECIAL BUTTONS */
 button.danger{
-    background-color:#e54c1e;
+  background-color:#e54c1e;
+  color: #ffffff;
 }
 button.danger:hover{
-    background-color:#eb0c0c;
-    filter: brightness(1.1);
+  background-color:#eb0c0c;
 }
+
 button.operator{
-    background-color:#1b4e96;
+  background-color:#5699f7;
+    color: #ffffff;
 }
-button.operator:hover{
-    background-color:#1b0086;
-    filter: brightness(1.1);
-}
+
 
 button.equal{
-    background-color: rgb(16, 159, 16);
-   
-}
-button.equal:hover{
-    background-color:#025207;
-     filter: brightness(1.1);
-}
-button.history{
-    border-radius: 28px;
-    background-color:#7e57e3;
-}
-button.history:hover{
-    background-color: rgb(58, 42, 177);
-    filter: brightness(1.1);
+  background-color: rgb(40, 238, 40);
+    color: #000000;
 }
 
+button.history{
+  background-color:#5699f7;
+}
 button.sqroot{
-    background-color:  #1b4e96;
+ background-color:#5699f7;
+   color: #ffffff;
 }
-button.sqroot:hover{
-    background-color:#1b0086;
-      filter: brightness(1.1);
-}
+/* ENTER BUTTON WIDER */
 button.enter{
-    width:130px;
-    background-color: #15b31f;
+  flex:2;
+  background-color: rgb(40, 238, 40);
 }
+
+/* FOOTER */
 footer{
-  background: rgba(0,0,0,0.15);
+  background: rgba(129, 124, 124, 0.75);
   color:#000;
   width:100%;
   font-size:small;
-  font-weight: bold;
- 
+  font-weight:bold;
+  text-align:center;
+  padding:10px;
 }
+
+/* MOBILE */
 @media(max-width:600px){
-    body{
-         background-image: url("calculator1.jpg");
-    background-position:center;
-    background-repeat: no-repeat;
+header{
+    font-size:32px;
+}
+  #display{
+    padding:20px;
+   height:50px;
+    font-size:32px;
+  }
 
-    padding-right: 5px;
-    }
-    #display{
- width:270px;
-height:35px;
-font-size:30px;
-border-radius: 10px;
-}
-
-    .calculator{
-    width:280px;
-}
-button {
-  width: 45px;
-  height: 40px;
-}
-button.enter{
-    width:100px;
-    background-color: #15b31f;
-}
+  button{
+    height:40px;
+  }
 }
